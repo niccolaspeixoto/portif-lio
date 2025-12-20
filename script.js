@@ -1,15 +1,32 @@
-const next = document.getElementById('next')
-const prev = document.getElementById('prev')
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
 const container = document.getElementById("projectsContainer");
-const cardWidth = 400 + 30;
+const cards = document.querySelectorAll('.projects-card');
 
-function passing(){
-    container.scrollLeft += cardWidth
+let currentIndex = 0;
+
+function getCardWidth() {
+    const card = cards[0];
+    const style = getComputedStyle(container);
+    const gap = parseInt(style.columnGap || style.gap || 0);
+
+    return card.offsetWidth + gap;
 }
 
-function back(){
-    container.scrollLeft -= cardWidth
+function updateCarousel() {
+    container.scrollLeft = currentIndex * getCardWidth();
 }
 
-next.addEventListener('click', passing)
-prev.addEventListener('click', back)
+next.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+prev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+});
