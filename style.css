@@ -344,15 +344,16 @@ footer p{
 
     .projects{
         width: auto;
+        padding: 10px;
     }
 
     .projects-window {
-    width: 350px;
+    width: 300px;
     }
 
     .projects-card{
-        min-width: 350px;
-        max-width: 350px;
+        min-width: 300px;
+        max-width: 300px;
     }
 
     .techs{
@@ -375,7 +376,7 @@ footer p{
     footer h1 {
     margin-top: 10px;
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     }
 
     .wrapper-links{
