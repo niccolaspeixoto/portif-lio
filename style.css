@@ -327,7 +327,7 @@ footer p{
 @media (max-width: 768px) {
 
     body{
-        width: 100vw;
+        width: auto;
         height: auto;
     }
 
@@ -339,7 +339,7 @@ footer p{
 
     .header-link{
         margin: 2px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .projects{
@@ -359,6 +359,10 @@ footer p{
     .techs{
         width: auto;
         height: 50vh;
+    }
+
+    .techs h1{
+        text-align: center;
     }
 
     .html-img, .css-img, .js-img{
